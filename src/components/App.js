@@ -33,9 +33,19 @@ const App = () => {
     { name: 'Tirupati', country: 'India' },
     ]
     
+   setCities(cityList.filter((city) => city.country === 'India'));
   return (
     <div id="main">
                {/* Do not remove the main div */}
+               <ol>
+             {
+              cities.map((city,location) =>{
+                return(
+                  <li key={location}>{city.name}</li>
+                )
+              })
+             }  
+             </ol>
     </div>
   )
 }
